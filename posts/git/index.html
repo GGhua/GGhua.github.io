@@ -1,0 +1,616 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Git 常用命令 - Blog</title><meta name=author content="GGhua"><meta name=description content="生成 SSH 公钥 Windows 用户建议使用 Windows PowerShell 或者 Git Bash，在 命令提示符 下无 cat 和 ls 命令。
+"><meta name=keywords content='git'><meta itemprop=name content="git 常用命令"><meta itemprop=description content="生成 SSH 公钥 Windows 用户建议使用 Windows PowerShell 或者 Git Bash，在 命令提示符 下无 cat 和 ls 命令。"><meta itemprop=datePublished content="2021-12-18T14:22:09+08:00"><meta itemprop=dateModified content="2021-12-18T14:22:09+08:00"><meta itemprop=wordCount content="2787"><meta itemprop=keywords content="Git"><meta property="og:url" content="https://GGhua.github.io/posts/git/"><meta property="og:site_name" content="Blog"><meta property="og:title" content="git 常用命令"><meta property="og:description" content="生成 SSH 公钥 Windows 用户建议使用 Windows PowerShell 或者 Git Bash，在 命令提示符 下无 cat 和 ls 命令。"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-12-18T14:22:09+08:00"><meta property="article:modified_time" content="2021-12-18T14:22:09+08:00"><meta property="article:tag" content="Git"><meta name=twitter:card content="summary"><meta name=twitter:title content="git 常用命令"><meta name=twitter:description content="生成 SSH 公钥 Windows 用户建议使用 Windows PowerShell 或者 Git Bash，在 命令提示符 下无 cat 和 ls 命令。"><meta name=application-name content="FixIt"><meta name=apple-mobile-web-app-title content="FixIt"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical type=text/html href=https://GGhua.github.io/posts/git/ title="git 常用命令 - Blog"><link rel=prev type=text/html href=https://GGhua.github.io/about/ title><link rel=next type=text/html href=https://GGhua.github.io/posts/halo/ title=Halo的部署安装><link rel=alternate type=text/markdown href=https://GGhua.github.io/posts/git/index.md title="git 常用命令 - Blog"><link rel=stylesheet href=/css/config.min.css><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"git 常用命令","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/GGhua.github.io\/posts\/git\/"},"genre":"posts","keywords":"git","wordcount":2787,"url":"https:\/\/GGhua.github.io\/posts\/git\/","datePublished":"2021-12-18T14:22:09+08:00","dateModified":"2021-12-18T14:22:09+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"GGhua"},"description":""}</script><script src=/js/head/color-scheme.min.js></script></head><body data-header-desktop=sticky data-header-mobile=auto><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title=Blog><span class=header-title-text>Blog</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-file-lines fa-fw fa-fw fa-sm" aria-hidden=true></i> 文章</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder fa-fw fa-fw fa-sm" aria-hidden=true></i> 分类</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tag fa-fw fa-fw fa-sm" aria-hidden=true></i> 标签</a></li><li class=menu-item><a class=menu-link href=/about/><i class="fa-solid fa-user fa-fw fa-fw fa-sm" aria-hidden=true></i> 关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容…… id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title=Blog><span class=header-title-text>Blog</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容…… id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></li><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-file-lines fa-fw fa-fw fa-sm" aria-hidden=true></i> 文章</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder fa-fw fa-fw fa-sm" aria-hidden=true></i> 分类</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tag fa-fw fa-fw fa-sm" aria-hidden=true></i> 标签</a></li><li class=menu-item><a class=menu-link href=/about/><i class="fa-solid fa-user fa-fw fa-fw fa-sm" aria-hidden=true></i> 关于</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=fi-container><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=合集></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>Git 常用命令</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><a href=https://GGhua.github.io/ title=作者 target=_blank rel="external nofollow noopener noreferrer author" class=author><img class=avatar src=/images/avatar.jpg alt=GGhua height=16 width=16>&nbsp;GGhua</a></span><span class=post-included-in>&nbsp;收录于 <a href=/categories/%E5%AD%A6%E4%B9%A0/ class=post-category title="分类 - 学习"><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> 学习</a></span></div><div class=post-meta-line><span title="发布于 2021-12-18 14:22:09"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2021-12-18>2021-12-18</time></span>&nbsp;<span title="2787 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>约 2800 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>预计阅读 6 分钟</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#生成-ssh-公钥>生成 SSH 公钥</a></li><li><a href=#添加部署公钥>添加部署公钥</a><ul><li><ul><li><a href=#git设置全局用户名和邮箱>git设置全局用户名和邮箱</a></li><li><a href=#git设置局部用户名和邮箱>git设置局部用户名和邮箱</a></li><li><a href=#git-config-list>git config &ndash;list</a></li></ul></li></ul></li><li><a href=#git-常用命令>Git 常用命令</a><ul><li><a href=#仓库>仓库</a></li><li><a href=#配置>配置</a></li><li><a href=#增加删除文件>增加/删除文件</a></li><li><a href=#代码提交>代码提交</a></li><li><a href=#分支>分支</a></li><li><a href=#标签>标签</a></li><li><a href=#查看信息>查看信息</a></li><li><a href=#远程同步>远程同步</a></li><li><a href=#撤销>撤销</a></li><li><a href=#其他>其他</a></li><li><a href=#迁移本地仓库至不同远程仓库>迁移本地仓库至不同远程仓库</a></li></ul></li></ul></nav></div></div><div class=content id=content><h2 class=heading-element id=生成-ssh-公钥><span>生成 SSH 公钥</span>
+<a href=#%e7%94%9f%e6%88%90-ssh-%e5%85%ac%e9%92%a5 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><blockquote><p>Windows 用户建议使用 <strong>Windows PowerShell</strong> 或者 <strong>Git Bash</strong>，在 <strong>命令提示符</strong> 下无 <code>cat</code> 和 <code>ls</code> 命令。</p></blockquote><p>1、通过命令 <code>ssh-keygen</code> 生成 SSH Key：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ssh-keygen -t rsa -C <span class=s2>&#34;XXX@xxx.com&#34;</span></span></span></code></pre></td></tr></table></div></div><ul><li><code>-t</code> key 类型</li><li><code>-C</code> 注释</li></ul><p>输出，如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Generating public/private ed25519 key pair.
+</span></span><span class=line><span class=cl>Enter file in which to save the key <span class=o>(</span>/home/git/.ssh/id_ed25519<span class=o>)</span>:
+</span></span><span class=line><span class=cl>Enter passphrase <span class=o>(</span>empty <span class=k>for</span> no passphrase<span class=o>)</span>:
+</span></span><span class=line><span class=cl>Enter same passphrase again:
+</span></span><span class=line><span class=cl>Your identification has been saved in /home/git/.ssh/id_ed25519
+</span></span><span class=line><span class=cl>Your public key has been saved in /home/git/.ssh/id_ed25519.pub
+</span></span><span class=line><span class=cl>The key fingerprint is:
+</span></span><span class=line><span class=cl>SHA256:xxxxx Gitee SSH Key
+</span></span><span class=line><span class=cl>The key<span class=err>&#39;</span>s randomart image is:
+</span></span><span class=line><span class=cl>+--<span class=o>[</span>ED25519 256<span class=o>]</span>--+
+</span></span><span class=line><span class=cl><span class=p>|</span>    .o           <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>   .+oo          <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  ...O o +       <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>   .  * <span class=o>=</span> +.     <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  .o +  S   +    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>.    o o..+* *   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>.E. o . ..+.O    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> . . ... <span class=nv>o</span> <span class=o>=</span>.    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>    ..oo. o. o   <span class=p>|</span>
+</span></span><span class=line><span class=cl>+----<span class=o>[</span>SHA256<span class=o>]</span>-----+</span></span></code></pre></td></tr></table></div></div><ul><li>中间通过三次<strong>回车键</strong>确定</li></ul><p>2、查看生成的 SSH 公钥和私钥：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ls ~/.ssh/</span></span></code></pre></td></tr></table></div></div><p>输出：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>id_ed25519  id_ed25519.pub</span></span></code></pre></td></tr></table></div></div><ul><li>私钥文件 <code>id_ed25519</code></li><li>公钥文件 <code>id_ed25519.pub</code></li></ul><p>3、读取公钥文件 <code>~/.ssh/id_ed25519.pub</code>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cat ~/.ssh/id_ed25519.pub</span></span></code></pre></td></tr></table></div></div><p>输出，如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ssh-ed25519 AAAA***5B Gitee SSH Key</span></span></code></pre></td></tr></table></div></div><p>复制终端输出的公钥。</p><h2 class=heading-element id=添加部署公钥><span>添加部署公钥</span>
+<a href=#%e6%b7%bb%e5%8a%a0%e9%83%a8%e7%bd%b2%e5%85%ac%e9%92%a5 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><p>复制生成后的 ssh key，通过仓库主页 <strong>「管理」->「部署公钥管理」->「添加部署公钥」</strong> ，将生成的公钥添加到仓库中。</p><p>通过 <code>ssh -T</code> 测试时，输出 <strong>Anonymous</strong>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ ssh -T git@gitee.com
+</span></span><span class=line><span class=cl>Hi Anonymous! You<span class=err>&#39;</span>ve successfully authenticated, but GITEE.COM does not provide shell access.</span></span></code></pre></td></tr></table></div></div><p>添加成功后，就可以使用 SSH 协议对仓库进行<strong>拉取</strong>。</p><h4 class=heading-element id=git设置全局用户名和邮箱><span>git设置全局用户名和邮箱</span>
+<a href=#git%e8%ae%be%e7%bd%ae%e5%85%a8%e5%b1%80%e7%94%a8%e6%88%b7%e5%90%8d%e5%92%8c%e9%82%ae%e7%ae%b1 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --global user.name <span class=s2>&#34;user_name&#34;</span>
+</span></span><span class=line><span class=cl>git config --global user.email <span class=s2>&#34;user_email&#34;</span></span></span></code></pre></td></tr></table></div></div><h4 class=heading-element id=git设置局部用户名和邮箱><span>git设置局部用户名和邮箱</span>
+<a href=#git%e8%ae%be%e7%bd%ae%e5%b1%80%e9%83%a8%e7%94%a8%e6%88%b7%e5%90%8d%e5%92%8c%e9%82%ae%e7%ae%b1 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --local user.name <span class=s2>&#34;user_name&#34;</span>
+</span></span><span class=line><span class=cl>git config --local user.email <span class=s2>&#34;user_email&#34;</span></span></span></code></pre></td></tr></table></div></div><h4 class=heading-element id=git-config-list><span>git config &ndash;list</span>
+<a href=#git-config-list class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>diff.astextplain.textconv<span class=o>=</span>astextplain
+</span></span><span class=line><span class=cl>filter.lfs.clean<span class=o>=</span>git-lfs clean -- %f
+</span></span><span class=line><span class=cl>filter.lfs.smudge<span class=o>=</span>git-lfs smudge -- %f
+</span></span><span class=line><span class=cl>filter.lfs.process<span class=o>=</span>git-lfs filter-process
+</span></span><span class=line><span class=cl>filter.lfs.required<span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>http.sslbackend<span class=o>=</span>openssl
+</span></span><span class=line><span class=cl>http.sslcainfo<span class=o>=</span>D:/1_SoftwareSpace/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+</span></span><span class=line><span class=cl>core.autocrlf<span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>core.fscache<span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>core.symlinks<span class=o>=</span><span class=nb>false</span>
+</span></span><span class=line><span class=cl>pull.rebase<span class=o>=</span><span class=nb>false</span>
+</span></span><span class=line><span class=cl>credential.helper<span class=o>=</span>manager
+</span></span><span class=line><span class=cl>credential.https://dev.azure.com.usehttppath<span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>init.defaultbranch<span class=o>=</span>master
+</span></span><span class=line><span class=cl>user.name<span class=o>=</span>user_name
+</span></span><span class=line><span class=cl>user.email<span class=o>=</span>user_email</span></span></code></pre></td></tr></table></div></div><h2 class=heading-element id=git-常用命令><span>Git 常用命令</span>
+<a href=#git-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h2><h3 class=heading-element id=仓库><span>仓库</span>
+<a href=#%e4%bb%93%e5%ba%93 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 在当前目录新建一个Git代码库</span>
+</span></span><span class=line><span class=cl>$ git init
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个目录，将其初始化为Git代码库</span>
+</span></span><span class=line><span class=cl>$ git init <span class=o>[</span>project-name<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 下载一个项目和它的整个代码历史</span>
+</span></span><span class=line><span class=cl>$ git clone <span class=o>[</span>url<span class=o>]</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=配置><span>配置</span>
+<a href=#%e9%85%8d%e7%bd%ae class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 显示当前的Git配置</span>
+</span></span><span class=line><span class=cl>$ git config --list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 编辑Git配置文件</span>
+</span></span><span class=line><span class=cl>$ git config -e <span class=o>[</span>--global<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 设置提交代码时的用户信息</span>
+</span></span><span class=line><span class=cl>$ git config <span class=o>[</span>--global<span class=o>]</span> user.name <span class=s2>&#34;[name]&#34;</span>
+</span></span><span class=line><span class=cl>$ git config <span class=o>[</span>--global<span class=o>]</span> user.email <span class=s2>&#34;[email address]&#34;</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=增加删除文件><span>增加/删除文件</span>
+<a href=#%e5%a2%9e%e5%8a%a0%e5%88%a0%e9%99%a4%e6%96%87%e4%bb%b6 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 添加指定文件到暂存区</span>
+</span></span><span class=line><span class=cl>$ git add <span class=o>[</span>file1<span class=o>]</span> <span class=o>[</span>file2<span class=o>]</span> ...
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 添加指定目录到暂存区，包括子目录</span>
+</span></span><span class=line><span class=cl>$ git add <span class=o>[</span>dir<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 添加当前目录的所有文件到暂存区</span>
+</span></span><span class=line><span class=cl>$ git add .
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 添加每个变化前，都会要求确认</span>
+</span></span><span class=line><span class=cl><span class=c1># 对于同一个文件的多处变化，可以实现分次提交</span>
+</span></span><span class=line><span class=cl>$ git add -p
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除工作区文件，并且将这次删除放入暂存区</span>
+</span></span><span class=line><span class=cl>$ git rm <span class=o>[</span>file1<span class=o>]</span> <span class=o>[</span>file2<span class=o>]</span> ...
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 停止追踪指定文件，但该文件会保留在工作区</span>
+</span></span><span class=line><span class=cl>$ git rm --cached <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 改名文件，并且将这个改名放入暂存区</span>
+</span></span><span class=line><span class=cl>$ git mv <span class=o>[</span>file-original<span class=o>]</span> <span class=o>[</span>file-renamed<span class=o>]</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=代码提交><span>代码提交</span>
+<a href=#%e4%bb%a3%e7%a0%81%e6%8f%90%e4%ba%a4 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 提交暂存区到仓库区</span>
+</span></span><span class=line><span class=cl>$ git commit -m <span class=o>[</span>message<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 提交暂存区的指定文件到仓库区</span>
+</span></span><span class=line><span class=cl>$ git commit <span class=o>[</span>file1<span class=o>]</span> <span class=o>[</span>file2<span class=o>]</span> ... -m <span class=o>[</span>message<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 提交工作区自上次commit之后的变化，直接到仓库区</span>
+</span></span><span class=line><span class=cl>$ git commit -a
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 提交时显示所有diff信息</span>
+</span></span><span class=line><span class=cl>$ git commit -v
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 使用一次新的commit，替代上一次提交</span>
+</span></span><span class=line><span class=cl><span class=c1># 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span>
+</span></span><span class=line><span class=cl>$ git commit --amend -m <span class=o>[</span>message<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重做上一次commit，并包括指定文件的新变化</span>
+</span></span><span class=line><span class=cl>$ git commit --amend <span class=o>[</span>file1<span class=o>]</span> <span class=o>[</span>file2<span class=o>]</span> ...</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=分支><span>分支</span>
+<a href=#%e5%88%86%e6%94%af class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 列出所有本地分支</span>
+</span></span><span class=line><span class=cl>$ git branch
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 列出所有远程分支</span>
+</span></span><span class=line><span class=cl>$ git branch -r
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 列出所有本地分支和远程分支</span>
+</span></span><span class=line><span class=cl>$ git branch -a
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个分支，但依然停留在当前分支</span>
+</span></span><span class=line><span class=cl>$ git branch <span class=o>[</span>branch-name<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个分支，并切换到该分支</span>
+</span></span><span class=line><span class=cl>$ git checkout -b <span class=o>[</span>branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个分支，指向指定commit</span>
+</span></span><span class=line><span class=cl>$ git branch <span class=o>[</span>branch<span class=o>]</span> <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个分支，与指定的远程分支建立追踪关系</span>
+</span></span><span class=line><span class=cl>$ git branch --track <span class=o>[</span>branch<span class=o>]</span> <span class=o>[</span>remote-branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 切换到指定分支，并更新工作区</span>
+</span></span><span class=line><span class=cl>$ git checkout <span class=o>[</span>branch-name<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 切换到上一个分支</span>
+</span></span><span class=line><span class=cl>$ git checkout -
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 建立追踪关系，在现有分支与指定的远程分支之间</span>
+</span></span><span class=line><span class=cl>$ git branch --set-upstream <span class=o>[</span>branch<span class=o>]</span> <span class=o>[</span>remote-branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 合并指定分支到当前分支</span>
+</span></span><span class=line><span class=cl>$ git merge <span class=o>[</span>branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 选择一个commit，合并进当前分支</span>
+</span></span><span class=line><span class=cl>$ git cherry-pick <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除分支</span>
+</span></span><span class=line><span class=cl>$ git branch -d <span class=o>[</span>branch-name<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除远程分支</span>
+</span></span><span class=line><span class=cl>$ git push origin --delete <span class=o>[</span>branch-name<span class=o>]</span>
+</span></span><span class=line><span class=cl>$ git branch -dr <span class=o>[</span>remote/branch<span class=o>]</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=标签><span>标签</span>
+<a href=#%e6%a0%87%e7%ad%be class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 列出所有tag</span>
+</span></span><span class=line><span class=cl>$ git tag
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个tag在当前commit</span>
+</span></span><span class=line><span class=cl>$ git tag <span class=o>[</span>tag<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个tag在指定commit</span>
+</span></span><span class=line><span class=cl>$ git tag <span class=o>[</span>tag<span class=o>]</span> <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除本地tag</span>
+</span></span><span class=line><span class=cl>$ git tag -d <span class=o>[</span>tag<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除远程tag</span>
+</span></span><span class=line><span class=cl>$ git push origin :refs/tags/<span class=o>[</span>tagName<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 查看tag信息</span>
+</span></span><span class=line><span class=cl>$ git show <span class=o>[</span>tag<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 提交指定tag</span>
+</span></span><span class=line><span class=cl>$ git push <span class=o>[</span>remote<span class=o>]</span> <span class=o>[</span>tag<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 提交所有tag</span>
+</span></span><span class=line><span class=cl>$ git push <span class=o>[</span>remote<span class=o>]</span> --tags
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个分支，指向某个tag</span>
+</span></span><span class=line><span class=cl>$ git checkout -b <span class=o>[</span>branch<span class=o>]</span> <span class=o>[</span>tag<span class=o>]</span></span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=查看信息><span>查看信息</span>
+<a href=#%e6%9f%a5%e7%9c%8b%e4%bf%a1%e6%81%af class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 显示有变更的文件</span>
+</span></span><span class=line><span class=cl>$ git status
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示当前分支的版本历史</span>
+</span></span><span class=line><span class=cl>$ git log
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示commit历史，以及每次commit发生变更的文件</span>
+</span></span><span class=line><span class=cl>$ git log --stat
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 搜索提交历史，根据关键词</span>
+</span></span><span class=line><span class=cl>$ git log -S <span class=o>[</span>keyword<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某个commit之后的所有变动，每个commit占据一行</span>
+</span></span><span class=line><span class=cl>$ git log <span class=o>[</span>tag<span class=o>]</span> HEAD --pretty<span class=o>=</span>format:%s
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某个commit之后的所有变动，其&#34;提交说明&#34;必须符合搜索条件</span>
+</span></span><span class=line><span class=cl>$ git log <span class=o>[</span>tag<span class=o>]</span> HEAD --grep feature
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某个文件的版本历史，包括文件改名</span>
+</span></span><span class=line><span class=cl>$ git log --follow <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>$ git whatchanged <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示指定文件相关的每一次diff</span>
+</span></span><span class=line><span class=cl>$ git log -p <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示过去5次提交</span>
+</span></span><span class=line><span class=cl>$ git log -5 --pretty --oneline
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示所有提交过的用户，按提交次数排序</span>
+</span></span><span class=line><span class=cl>$ git shortlog -sn
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示指定文件是什么人在什么时间修改过</span>
+</span></span><span class=line><span class=cl>$ git blame <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示暂存区和工作区的差异</span>
+</span></span><span class=line><span class=cl>$ git diff
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示暂存区和上一个commit的差异</span>
+</span></span><span class=line><span class=cl>$ git diff --cached <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示工作区与当前分支最新commit之间的差异</span>
+</span></span><span class=line><span class=cl>$ git diff HEAD
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示两次提交之间的差异</span>
+</span></span><span class=line><span class=cl>$ git diff <span class=o>[</span>first-branch<span class=o>]</span>...<span class=o>[</span>second-branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示今天你写了多少行代码</span>
+</span></span><span class=line><span class=cl>$ git diff --shortstat <span class=s2>&#34;@{0 day ago}&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某次提交的元数据和内容变化</span>
+</span></span><span class=line><span class=cl>$ git show <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某次提交发生变化的文件</span>
+</span></span><span class=line><span class=cl>$ git show --name-only <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某次提交时，某个文件的内容</span>
+</span></span><span class=line><span class=cl>$ git show <span class=o>[</span>commit<span class=o>]</span>:<span class=o>[</span>filename<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示当前分支的最近几次提交</span>
+</span></span><span class=line><span class=cl>$ git reflog</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=远程同步><span>远程同步</span>
+<a href=#%e8%bf%9c%e7%a8%8b%e5%90%8c%e6%ad%a5 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 下载远程仓库的所有变动</span>
+</span></span><span class=line><span class=cl>$ git fetch <span class=o>[</span>remote<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示所有远程仓库</span>
+</span></span><span class=line><span class=cl>$ git remote -v
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 显示某个远程仓库的信息</span>
+</span></span><span class=line><span class=cl>$ git remote show <span class=o>[</span>remote<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 增加一个新的远程仓库，并命名</span>
+</span></span><span class=line><span class=cl>$ git remote add <span class=o>[</span>shortname<span class=o>]</span> <span class=o>[</span>url<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 取回远程仓库的变化，并与本地分支合并</span>
+</span></span><span class=line><span class=cl>$ git pull <span class=o>[</span>remote<span class=o>]</span> <span class=o>[</span>branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 上传本地指定分支到远程仓库</span>
+</span></span><span class=line><span class=cl>$ git push <span class=o>[</span>remote<span class=o>]</span> <span class=o>[</span>branch<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 强行推送当前分支到远程仓库，即使有冲突</span>
+</span></span><span class=line><span class=cl>$ git push <span class=o>[</span>remote<span class=o>]</span> --force
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 推送所有分支到远程仓库</span>
+</span></span><span class=line><span class=cl>$ git push <span class=o>[</span>remote<span class=o>]</span> --all</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=撤销><span>撤销</span>
+<a href=#%e6%92%a4%e9%94%80 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 恢复暂存区的指定文件到工作区</span>
+</span></span><span class=line><span class=cl>$ git checkout <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 恢复某个commit的指定文件到暂存区和工作区</span>
+</span></span><span class=line><span class=cl>$ git checkout <span class=o>[</span>commit<span class=o>]</span> <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 恢复暂存区的所有文件到工作区</span>
+</span></span><span class=line><span class=cl>$ git checkout .
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span>
+</span></span><span class=line><span class=cl>$ git reset <span class=o>[</span>file<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重置暂存区与工作区，与上一次commit保持一致</span>
+</span></span><span class=line><span class=cl>$ git reset --hard
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span>
+</span></span><span class=line><span class=cl>$ git reset <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span>
+</span></span><span class=line><span class=cl>$ git reset --hard <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span>
+</span></span><span class=line><span class=cl>$ git reset --keep <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 新建一个commit，用来撤销指定commit</span>
+</span></span><span class=line><span class=cl><span class=c1># 后者的所有变化都将被前者抵消，并且应用到当前分支</span>
+</span></span><span class=line><span class=cl>$ git revert <span class=o>[</span>commit<span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>暂时将未提交的变化移除，稍后再移入
+</span></span><span class=line><span class=cl>$ git stash
+</span></span><span class=line><span class=cl>$ git stash pop</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=其他><span>其他</span>
+<a href=#%e5%85%b6%e4%bb%96 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 生成一个可供发布的压缩包</span>
+</span></span><span class=line><span class=cl>$ git archive</span></span></code></pre></td></tr></table></div></div><p>规范</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>feat: 新功能（feature）
+</span></span><span class=line><span class=cl>fix: 修补bug
+</span></span><span class=line><span class=cl>docs: 文档（documentation）
+</span></span><span class=line><span class=cl>style: 格式（不影响代码运行的变动）
+</span></span><span class=line><span class=cl>refactor: 重构（即不是新增功能，也不是修改bug的代码变动）
+</span></span><span class=line><span class=cl>chore: 构建过程或辅助工具的变动
+</span></span><span class=line><span class=cl>revert: 撤销，版本回退
+</span></span><span class=line><span class=cl>perf: 性能优化
+</span></span><span class=line><span class=cl>test：测试
+</span></span><span class=line><span class=cl>improvement: 改进
+</span></span><span class=line><span class=cl>build: 打包
+</span></span><span class=line><span class=cl>ci: 持续集成</span></span></code></pre></td></tr></table></div></div><h3 class=heading-element id=迁移本地仓库至不同远程仓库><span>迁移本地仓库至不同远程仓库</span>
+<a href=#%e8%bf%81%e7%a7%bb%e6%9c%ac%e5%9c%b0%e4%bb%93%e5%ba%93%e8%87%b3%e4%b8%8d%e5%90%8c%e8%bf%9c%e7%a8%8b%e4%bb%93%e5%ba%93 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>git remote rm origin
+</span></span><span class=line><span class=cl>git remote add origin 新地址
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>git push -u origin --all
+</span></span><span class=line><span class=cl>git push -u origin --tags</span></span></code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="更新于 2021-12-18 14:22:09">更新于 2021-12-18&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>CC BY-NC-SA 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md><span><a href=/posts/git/index.md title=阅读原始文档 class=link-to-markdown>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 X" data-sharer=twitter data-url=https://GGhua.github.io/posts/git/ data-title="Git 常用命令" data-hashtags=git><i class="fa-brands fa-x-twitter fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://GGhua.github.io/posts/git/ data-hashtag=git><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://GGhua.github.io/posts/git/ data-title="Git 常用命令"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/git/ class=post-tag title="标签 - Git">Git</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/posts/halo/ class=post-nav-item rel=next title=Halo的部署安装>Halo的部署安装<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article><aside class=toc id=toc-auto aria-label=目录><h2 class=toc-title>目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside></main><footer class=footer><div class=footer-container><div class="footer-line powered">由 <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreferrer" title="Hugo 0.152.2"><img class=hugo-icon src=/images/hugo.min.svg alt="Hugo logo"> Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/hugo-fixit/FixIt target=_blank rel=external title="FixIt v0.4.0-alpha.2-20251023040336-063af2cd"><img class=fixit-icon src=/images/fixit.min.svg alt="FixIt logo"> FixIt</a></div><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2025</span><span class=author itemprop=copyrightHolder>
+<a href=https://GGhua.github.io/ target=_blank rel="external nofollow noopener noreferrer">GGhua</a></span></div></div></footer></div><div class=widgets><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role=button aria-label=回到顶部><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><span class="variant-numeric d-none">0%</span></div></div><div id=mask></div><noscript><div class=noscript-warning>该网站在启用 JavaScript 的情况下效果最佳。</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/posts/git/config/page.js defer></script><script src=/js/theme.min.js defer></script></body></html>
