@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog</title><link>https://GGhua.github.io/</link><description>Blog</description><generator>Hugo 0.152.2 &amp; FixIt v0.4.0-alpha.3-20251128065536-6d00e42b</generator><language>zh-CN</language><managingEditor>2895789672@qq.com (GGhua)</managingEditor><webMaster>2895789672@qq.com (GGhua)</webMaster><lastBuildDate>Tue, 20 May 2025 12:21:39 +0800</lastBuildDate><atom:link href="https://GGhua.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Halo的部署安装</title><link>https://GGhua.github.io/posts/halo/</link><pubDate>Tue, 20 May 2025 12:21:39 +0800</pubDate><author>2895789672@qq.com (GGhua)</author><guid>https://GGhua.github.io/posts/halo/</guid><category domain="https://GGhua.github.io/categories/%E6%8A%98%E8%85%BE/">折腾</category><description>&lt;p&gt;&lt;a href="https://docs.halo.run/getting-started/install/docker-compose/?current=external-db"target="_blank" rel="external nofollow noopener noreferrer"&gt;使用 Docker Compose 部署 | Halo 文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir&amp;ensp;~/halo&amp;ensp;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&amp;ensp;&lt;span class="nb"&gt;cd&lt;/span&gt;&amp;ensp;~/halo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;docker-compase安装halo&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/halo/docker-compose.yaml&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-shell"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir&amp;ensp;~/halo&amp;ensp;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&amp;ensp;&lt;span class="nb"&gt;cd&lt;/span&gt;&amp;ensp;~/halo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;docker-compase安装halo&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-shell"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/halo/docker-compose.yaml&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="19" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-yml"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yml" data-lang="yml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
@@ -21,13 +55,29 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="c"&gt;#&amp;ensp;外部访问地址，请根据实际需要修改&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;-&amp;ensp;--&lt;span class="l"&gt;halo.external-url=http://localhost:8090/&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="c"&gt;#&amp;ensp;端口号&amp;ensp;默认8090&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;-&amp;ensp;--&lt;span class="l"&gt;server.port=8090&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;启动服务&lt;/p&gt;
-
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;-&amp;ensp;--&lt;span class="l"&gt;server.port=8090&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;启动服务&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="3" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-shell"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker-compose&amp;ensp;up&amp;ensp;-d
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;查看日志&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker-compose&amp;ensp;logs&amp;ensp;-f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Docker CLI安装 halo&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker&amp;ensp;run&amp;ensp;-it&amp;ensp;-d&amp;ensp;--name&amp;ensp;halo&amp;ensp;-p&amp;ensp;8090:8090&amp;ensp;-v&amp;ensp;~/.halo2:/root/.halo2&amp;ensp;registry.fit2cloud.com/halo/halo:2.19&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>git 常用命令</title><link>https://GGhua.github.io/posts/git/</link><pubDate>Sat, 18 Dec 2021 14:22:09 +0800</pubDate><author>2895789672@qq.com (GGhua)</author><guid>https://GGhua.github.io/posts/git/</guid><category domain="https://GGhua.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category><description>&lt;h2 class="heading-element" id="生成-ssh-公钥"&gt;&lt;span&gt;生成 SSH 公钥&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker-compose&amp;ensp;logs&amp;ensp;-f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Docker CLI安装 halo&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-sh"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker&amp;ensp;run&amp;ensp;-it&amp;ensp;-d&amp;ensp;--name&amp;ensp;halo&amp;ensp;-p&amp;ensp;8090:8090&amp;ensp;-v&amp;ensp;~/.halo2:/root/.halo2&amp;ensp;registry.fit2cloud.com/halo/halo:2.19&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>git 常用命令</title><link>https://GGhua.github.io/posts/git/</link><pubDate>Sat, 18 Dec 2021 14:22:09 +0800</pubDate><author>2895789672@qq.com (GGhua)</author><guid>https://GGhua.github.io/posts/git/</guid><category domain="https://GGhua.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category><description>&lt;h2 class="heading-element" id="生成-ssh-公钥"&gt;&lt;span&gt;生成 SSH 公钥&lt;/span&gt;
  &lt;a href="#%e7%94%9f%e6%88%90-ssh-%e5%85%ac%e9%92%a5" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -35,13 +85,42 @@
 &lt;p&gt;Windows 用户建议使用 &lt;strong&gt;Windows PowerShell&lt;/strong&gt; 或者 &lt;strong&gt;Git Bash&lt;/strong&gt;，在 &lt;strong&gt;命令提示符&lt;/strong&gt; 下无 &lt;code&gt;cat&lt;/code&gt; 和 &lt;code&gt;ls&lt;/code&gt; 命令。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;1、通过命令 &lt;code&gt;ssh-keygen&lt;/code&gt; 生成 SSH Key：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh-keygen&amp;ensp;-t&amp;ensp;rsa&amp;ensp;-C&amp;ensp;&lt;span class="s2"&gt;&amp;#34;XXX@xxx.com&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh-keygen&amp;ensp;-t&amp;ensp;rsa&amp;ensp;-C&amp;ensp;&lt;span class="s2"&gt;&amp;#34;XXX@xxx.com&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-t&lt;/code&gt; key 类型&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-C&lt;/code&gt; 注释&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;输出，如：&lt;/p&gt;
-
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="20" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Generating&amp;ensp;public/private&amp;ensp;ed25519&amp;ensp;key&amp;ensp;pair.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Enter&amp;ensp;file&amp;ensp;in&amp;ensp;which&amp;ensp;to&amp;ensp;save&amp;ensp;the&amp;ensp;key&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;/home/git/.ssh/id_ed25519&lt;span class="o"&gt;)&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Enter&amp;ensp;passphrase&amp;ensp;&lt;span class="o"&gt;(&lt;/span&gt;empty&amp;ensp;&lt;span class="k"&gt;for&lt;/span&gt;&amp;ensp;no&amp;ensp;passphrase&lt;span class="o"&gt;)&lt;/span&gt;:
@@ -61,48 +140,114 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;|&lt;/span&gt;.E.&amp;ensp;o&amp;ensp;.&amp;ensp;..+.O&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;.&amp;ensp;.&amp;ensp;...&amp;ensp;&lt;span class="nv"&gt;o&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;=&lt;/span&gt;.&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;|&lt;/span&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;..oo.&amp;ensp;o.&amp;ensp;o&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;+----&lt;span class="o"&gt;[&lt;/span&gt;SHA256&lt;span class="o"&gt;]&lt;/span&gt;-----+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;+----&lt;span class="o"&gt;[&lt;/span&gt;SHA256&lt;span class="o"&gt;]&lt;/span&gt;-----+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;中间通过三次&lt;strong&gt;回车键&lt;/strong&gt;确定&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;2、查看生成的 SSH 公钥和私钥：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls&amp;ensp;~/.ssh/&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;id_ed25519&amp;ensp;&amp;ensp;id_ed25519.pub&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls&amp;ensp;~/.ssh/&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输出：&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;id_ed25519&amp;ensp;&amp;ensp;id_ed25519.pub&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;私钥文件 &lt;code&gt;id_ed25519&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;公钥文件 &lt;code&gt;id_ed25519.pub&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;3、读取公钥文件 &lt;code&gt;~/.ssh/id_ed25519.pub&lt;/code&gt;：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat&amp;ensp;~/.ssh/id_ed25519.pub&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;输出，如：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh-ed25519&amp;ensp;AAAA***5B&amp;ensp;Gitee&amp;ensp;SSH&amp;ensp;Key&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;复制终端输出的公钥。&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat&amp;ensp;~/.ssh/id_ed25519.pub&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输出，如：&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh-ed25519&amp;ensp;AAAA***5B&amp;ensp;Gitee&amp;ensp;SSH&amp;ensp;Key&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;复制终端输出的公钥。&lt;/p&gt;
 &lt;h2 class="heading-element" id="添加部署公钥"&gt;&lt;span&gt;添加部署公钥&lt;/span&gt;
  &lt;a href="#%e6%b7%bb%e5%8a%a0%e9%83%a8%e7%bd%b2%e5%85%ac%e9%92%a5" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;复制生成后的 ssh key，通过仓库主页 &lt;strong&gt;「管理」-&amp;gt;「部署公钥管理」-&amp;gt;「添加部署公钥」&lt;/strong&gt; ，将生成的公钥添加到仓库中。&lt;/p&gt;
 &lt;p&gt;通过 &lt;code&gt;ssh&amp;ensp;-T&lt;/code&gt; 测试时，输出 &lt;strong&gt;Anonymous&lt;/strong&gt;：&lt;/p&gt;
-
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="2" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;ssh&amp;ensp;-T&amp;ensp;git@gitee.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Hi&amp;ensp;Anonymous!&amp;ensp;You&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;ve&amp;ensp;successfully&amp;ensp;authenticated,&amp;ensp;but&amp;ensp;GITEE.COM&amp;ensp;does&amp;ensp;not&amp;ensp;provide&amp;ensp;shell&amp;ensp;access.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;添加成功后，就可以使用 SSH 协议对仓库进行&lt;strong&gt;拉取&lt;/strong&gt;。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Hi&amp;ensp;Anonymous!&amp;ensp;You&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;ve&amp;ensp;successfully&amp;ensp;authenticated,&amp;ensp;but&amp;ensp;GITEE.COM&amp;ensp;does&amp;ensp;not&amp;ensp;provide&amp;ensp;shell&amp;ensp;access.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;添加成功后，就可以使用 SSH 协议对仓库进行&lt;strong&gt;拉取&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 class="heading-element" id="git设置全局用户名和邮箱"&gt;&lt;span&gt;git设置全局用户名和邮箱&lt;/span&gt;
  &lt;a href="#git%e8%ae%be%e7%bd%ae%e5%85%a8%e5%b1%80%e7%94%a8%e6%88%b7%e5%90%8d%e5%92%8c%e9%82%ae%e7%ae%b1" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h4&gt;
+&lt;/h4&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="2" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--global&amp;ensp;user.name&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_name&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--global&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_email&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h4 class="heading-element" id="git设置局部用户名和邮箱"&gt;&lt;span&gt;git设置局部用户名和邮箱&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--global&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_email&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 class="heading-element" id="git设置局部用户名和邮箱"&gt;&lt;span&gt;git设置局部用户名和邮箱&lt;/span&gt;
  &lt;a href="#git%e8%ae%be%e7%bd%ae%e5%b1%80%e9%83%a8%e7%94%a8%e6%88%b7%e5%90%8d%e5%92%8c%e9%82%ae%e7%ae%b1" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h4&gt;
+&lt;/h4&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="2" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--local&amp;ensp;user.name&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_name&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--local&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_email&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h4 class="heading-element" id="git-config-list"&gt;&lt;span&gt;git config &amp;ndash;list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;config&amp;ensp;--local&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;user_email&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 class="heading-element" id="git-config-list"&gt;&lt;span&gt;git config &amp;ndash;list&lt;/span&gt;
  &lt;a href="#git-config-list" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h4&gt;
+&lt;/h4&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="16" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;diff.astextplain.textconv&lt;span class="o"&gt;=&lt;/span&gt;astextplain
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;filter.lfs.clean&lt;span class="o"&gt;=&lt;/span&gt;git-lfs&amp;ensp;clean&amp;ensp;--&amp;ensp;%f
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;filter.lfs.smudge&lt;span class="o"&gt;=&lt;/span&gt;git-lfs&amp;ensp;smudge&amp;ensp;--&amp;ensp;%f
@@ -118,7 +263,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;credential.https://dev.azure.com.usehttppath&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;init.defaultbranch&lt;span class="o"&gt;=&lt;/span&gt;master
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;user.name&lt;span class="o"&gt;=&lt;/span&gt;user_name
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;user.email&lt;span class="o"&gt;=&lt;/span&gt;user_email&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 class="heading-element" id="git-常用命令"&gt;&lt;span&gt;Git 常用命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;user.email&lt;span class="o"&gt;=&lt;/span&gt;user_email&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 class="heading-element" id="git-常用命令"&gt;&lt;span&gt;Git 常用命令&lt;/span&gt;
  &lt;a href="#git-%e5%b8%b8%e7%94%a8%e5%91%bd%e4%bb%a4" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -126,7 +273,18 @@
  &lt;a href="#%e4%bb%93%e5%ba%93" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="8" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;在当前目录新建一个Git代码库&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;init
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -134,11 +292,25 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;init&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;project-name&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;下载一个项目和它的整个代码历史&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;clone&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;url&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="配置"&gt;&lt;span&gt;配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;clone&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;url&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="配置"&gt;&lt;span&gt;配置&lt;/span&gt;
  &lt;a href="#%e9%85%8d%e7%bd%ae" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="9" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;显示当前的Git配置&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;config&amp;ensp;--list
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -147,11 +319,37 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;设置提交代码时的用户信息&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;config&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;--global&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;user.name&amp;ensp;&lt;span class="s2"&gt;&amp;#34;[name]&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;config&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;--global&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;[email&amp;ensp;address]&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="增加删除文件"&gt;&lt;span&gt;增加/删除文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;config&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;--global&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;user.email&amp;ensp;&lt;span class="s2"&gt;&amp;#34;[email&amp;ensp;address]&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="增加删除文件"&gt;&lt;span&gt;增加/删除文件&lt;/span&gt;
  &lt;a href="#%e5%a2%9e%e5%8a%a0%e5%88%a0%e9%99%a4%e6%96%87%e4%bb%b6" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="21" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;添加指定文件到暂存区&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;add&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file1&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file2&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;...
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -172,11 +370,34 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;rm&amp;ensp;--cached&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;改名文件，并且将这个改名放入暂存区&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;mv&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file-original&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file-renamed&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="代码提交"&gt;&lt;span&gt;代码提交&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;mv&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file-original&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file-renamed&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="代码提交"&gt;&lt;span&gt;代码提交&lt;/span&gt;
  &lt;a href="#%e4%bb%a3%e7%a0%81%e6%8f%90%e4%ba%a4" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="18" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;提交暂存区到仓库区&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;commit&amp;ensp;-m&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;message&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -194,11 +415,58 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;commit&amp;ensp;--amend&amp;ensp;-m&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;message&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;重做上一次commit，并包括指定文件的新变化&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;commit&amp;ensp;--amend&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file1&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file2&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="分支"&gt;&lt;span&gt;分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;commit&amp;ensp;--amend&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file1&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file2&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="分支"&gt;&lt;span&gt;分支&lt;/span&gt;
  &lt;a href="#%e5%88%86%e6%94%af" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="42" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;列出所有本地分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;branch
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -240,11 +508,42 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;删除远程分支&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;push&amp;ensp;origin&amp;ensp;--delete&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;branch-name&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;branch&amp;ensp;-dr&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote/branch&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="标签"&gt;&lt;span&gt;标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;branch&amp;ensp;-dr&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote/branch&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="标签"&gt;&lt;span&gt;标签&lt;/span&gt;
  &lt;a href="#%e6%a0%87%e7%ad%be" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="26" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;列出所有tag&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;tag
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -270,11 +569,76 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;push&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;--tags
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;新建一个分支，指向某个tag&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;checkout&amp;ensp;-b&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;tag&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="查看信息"&gt;&lt;span&gt;查看信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;checkout&amp;ensp;-b&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;tag&lt;span class="o"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="查看信息"&gt;&lt;span&gt;查看信息&lt;/span&gt;
  &lt;a href="#%e6%9f%a5%e7%9c%8b%e4%bf%a1%e6%81%af" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="60" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
+&lt;/span&gt;&lt;span class="lnt"&gt;52
+&lt;/span&gt;&lt;span class="lnt"&gt;53
+&lt;/span&gt;&lt;span class="lnt"&gt;54
+&lt;/span&gt;&lt;span class="lnt"&gt;55
+&lt;/span&gt;&lt;span class="lnt"&gt;56
+&lt;/span&gt;&lt;span class="lnt"&gt;57
+&lt;/span&gt;&lt;span class="lnt"&gt;58
+&lt;/span&gt;&lt;span class="lnt"&gt;59
+&lt;/span&gt;&lt;span class="lnt"&gt;60
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;显示有变更的文件&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;status
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -334,11 +698,39 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;show&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;commit&lt;span class="o"&gt;]&lt;/span&gt;:&lt;span class="o"&gt;[&lt;/span&gt;filename&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;显示当前分支的最近几次提交&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;reflog&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="远程同步"&gt;&lt;span&gt;远程同步&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;reflog&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="远程同步"&gt;&lt;span&gt;远程同步&lt;/span&gt;
  &lt;a href="#%e8%bf%9c%e7%a8%8b%e5%90%8c%e6%ad%a5" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="23" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;下载远程仓库的所有变动&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;fetch&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -361,11 +753,47 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;push&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;--force
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;推送所有分支到远程仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;push&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;--all&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="撤销"&gt;&lt;span&gt;撤销&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;push&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;remote&lt;span class="o"&gt;]&lt;/span&gt;&amp;ensp;--all&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="撤销"&gt;&lt;span&gt;撤销&lt;/span&gt;
  &lt;a href="#%e6%92%a4%e9%94%80" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="31" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;恢复暂存区的指定文件到工作区&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;checkout&amp;ensp;&lt;span class="o"&gt;[&lt;/span&gt;file&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -396,14 +824,38 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;暂时将未提交的变化移除，稍后再移入
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;stash
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;stash&amp;ensp;pop&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="其他"&gt;&lt;span&gt;其他&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;stash&amp;ensp;pop&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="其他"&gt;&lt;span&gt;其他&lt;/span&gt;
  &lt;a href="#%e5%85%b6%e4%bb%96" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="2" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&amp;ensp;生成一个可供发布的压缩包&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;archive&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;规范&lt;/p&gt;
-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$&amp;ensp;git&amp;ensp;archive&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;规范&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="12" data-copyable="true"&gt;&lt;div class="code-expand-btn" aria-label="展开或折叠代码块" role="button"&gt;&lt;i class="fa-solid fa-angles-down" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-bash"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;feat:&amp;ensp;新功能（feature）
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;fix:&amp;ensp;修补bug
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docs:&amp;ensp;文档（documentation）
@@ -415,17 +867,41 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;test：测试
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;improvement:&amp;ensp;改进
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;build:&amp;ensp;打包
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ci:&amp;ensp;持续集成&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="迁移本地仓库至不同远程仓库"&gt;&lt;span&gt;迁移本地仓库至不同远程仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ci:&amp;ensp;持续集成&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="迁移本地仓库至不同远程仓库"&gt;&lt;span&gt;迁移本地仓库至不同远程仓库&lt;/span&gt;
  &lt;a href="#%e8%bf%81%e7%a7%bb%e6%9c%ac%e5%9c%b0%e4%bb%93%e5%ba%93%e8%87%b3%e4%b8%8d%e5%90%8c%e8%bf%9c%e7%a8%8b%e4%bb%93%e5%ba%93" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
-&lt;/h3&gt;
+&lt;/h3&gt;&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="5" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-sh"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;remote&amp;ensp;rm&amp;ensp;origin
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;remote&amp;ensp;add&amp;ensp;origin&amp;ensp;新地址
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;push&amp;ensp;-u&amp;ensp;origin&amp;ensp;--all
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;push&amp;ensp;-u&amp;ensp;origin&amp;ensp;--tags&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Java修改数组时报错UnsupportedOperationException</title><link>https://GGhua.github.io/posts/%E6%95%B0%E7%BB%84%E4%BF%AE%E6%94%B9%E6%8A%A5%E9%94%99/</link><pubDate>Thu, 21 Oct 2021 09:10:31 +0800</pubDate><author>2895789672@qq.com (GGhua)</author><guid>https://GGhua.github.io/posts/%E6%95%B0%E7%BB%84%E4%BF%AE%E6%94%B9%E6%8A%A5%E9%94%99/</guid><category domain="https://GGhua.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category><category domain="https://GGhua.github.io/categories/java/">Java</category><description>&lt;p&gt;样例代码：&lt;/p&gt;
-
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git&amp;ensp;push&amp;ensp;-u&amp;ensp;origin&amp;ensp;--tags&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Java修改数组时报错UnsupportedOperationException</title><link>https://GGhua.github.io/posts/%E6%95%B0%E7%BB%84%E4%BF%AE%E6%94%B9%E6%8A%A5%E9%94%99/</link><pubDate>Thu, 21 Oct 2021 09:10:31 +0800</pubDate><author>2895789672@qq.com (GGhua)</author><guid>https://GGhua.github.io/posts/%E6%95%B0%E7%BB%84%E4%BF%AE%E6%94%B9%E6%8A%A5%E9%94%99/</guid><category domain="https://GGhua.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category><category domain="https://GGhua.github.io/categories/java/">Java</category><description>&lt;p&gt;样例代码：&lt;/p&gt;
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="9" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-java"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@Test&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="nf"&gt;t1&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1,2,3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
@@ -434,7 +910,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;4&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;String.join(\&amp;#34;,\&amp;#34;,&amp;ensp;userIds)&amp;ensp;=&amp;ensp;&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;,&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个错误是因为java.util.Arrays.asList()方法返回的List对象实际上是AbstractList的一个实现，并且它背后关联的是一个数组。这种类型的List是不可变的，因此当你尝试添加或删除元素时，会抛出UnsupportedOperationException异常。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这个错误是因为java.util.Arrays.asList()方法返回的List对象实际上是AbstractList的一个实现，并且它背后关联的是一个数组。这种类型的List是不可变的，因此当你尝试添加或删除元素时，会抛出UnsupportedOperationException异常。
 解决这个问题的方法是在创建List时确保它是可变的。你已经在代码中尝试通过Lists.newArrayList(Arrays.asList(str.split(&amp;quot;,&amp;quot;)));来转换成一个新的ArrayList实例，但是这里使用了Guava库中的Lists工具类。如果你的项目中已经引入了Guava库，那么这段代码是正确的；如果没有引入Guava库，则可以使用标准Java库中的方法来创建一个可变的List。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -448,7 +926,20 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;正确的代码：&lt;/p&gt;
-
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="10" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-java"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;&amp;ensp;1
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;2
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;3
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;4
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;5
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;6
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;7
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;8
+&lt;/span&gt;&lt;span class="lnt"&gt;&amp;ensp;9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nd"&gt;@Test&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="nf"&gt;t1&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1,2,3&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
@@ -458,7 +949,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;4&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;String.join(\&amp;#34;,\&amp;#34;,&amp;ensp;userIds)&amp;ensp;=&amp;ensp;&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;,&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&amp;ensp;&lt;/span&gt;&lt;span class="n"&gt;userIds&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="heading-element" id="解释"&gt;&lt;span&gt;解释：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 class="heading-element" id="解释"&gt;&lt;span&gt;解释：&lt;/span&gt;
  &lt;a href="#%e8%a7%a3%e9%87%8a" class="heading-mark"&gt;
  &lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;
  &lt;/a&gt;
@@ -467,5 +960,11 @@
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;String.join(&amp;quot;,&amp;quot;,&amp;ensp;userIds)&lt;/code&gt;&lt;/strong&gt;：将列表中的元素用逗号连接成一个字符串。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;运行结果将是：&lt;/p&gt;
-
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;String.join(&amp;#34;,&amp;#34;,&amp;ensp;userIds)&amp;ensp;=&amp;ensp;2,3,4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
+&lt;div class="code-block highlight" data-mode="classic" data-max="10" data-lines="1" data-copyable="true"&gt;&lt;div class="chroma"&gt;
+&lt;div class="code-header language-fallback"&gt;&lt;span class="code-title"&gt;&lt;i class="arrow fa-solid fa-chevron-down fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="ellipses-btn" aria-label="Show more options" role="button"&gt;&lt;i class="fa-solid fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-nos-btn" aria-label="切换行号" role="button" title="切换行号"&gt;&lt;i class="fa-solid fa-list-ol fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="line-wrap-btn" aria-label="切换自动换行" role="button" title="切换自动换行"&gt;&lt;i class="fa-solid fa-right-left fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="copy-btn" aria-label="复制到剪贴板" role="button" title="复制到剪贴板"&gt;&lt;i class="fa-regular fa-clone fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;String.join(&amp;#34;,&amp;#34;,&amp;ensp;userIds)&amp;ensp;=&amp;ensp;2,3,4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
